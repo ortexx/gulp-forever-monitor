@@ -20,7 +20,7 @@ gulp.task('run:server', function() {
     console.log('server was restarted');          
   })
   .on('exit', function() {
-      console.log('server was closed');
+    console.log('server was closed');
   })
 })
 ```
