@@ -32,8 +32,7 @@ module.exports = function (source, options) {
         
     child.on('stderr', function(err) {
         console.log(err.toString());
-        process.exit(1);  
-    }) 
+    });
     
     process.on('SIGINT', function() {
         process.exit(); 
@@ -41,7 +40,7 @@ module.exports = function (source, options) {
         
     process.on('SIGTERM', function() {
         process.exit(); 
-    }); 
+    });
     
     process.on('exit', function() { 
         child.stop();      
