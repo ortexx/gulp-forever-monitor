@@ -30,10 +30,6 @@ module.exports = function (source, options) {
     
     child = new (forever.Monitor)(source, options);
         
-    child.on('stderr', function(err) {
-        console.log(err.toString());
-    });
-    
     process.on('SIGINT', function() {
         process.exit(); 
     });
