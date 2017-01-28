@@ -1,24 +1,35 @@
 {
-    "name": "gulp-forever-monitor",
-    "version": "0.0.2",
-    "description": "Forever deamon for gulp",
-     "main": "./gulp-forever-monitor",
-    "author": {
-        "name": "Balasyan Alexandr",
-        "email": "mywebstreet@gmail.com"
-    },
-    "keywords": [
-        "gulp",
-        "forever",
-        "monitor",
-        "deamon"
-    ],
-    "license": "MIT",  
-    "dependencies": {
-        "forever-monitor": "*"
-    }, 
-	"repository" : { 
-		"type" : "git",
-		"url" : "https://github.com/ortexx/gulp-forever-monitor"
-	}	
+  "name": "gulp-forever-monitor",
+  "version": "1.0.0",
+  "description": "Forever deamon for gulp",
+  "main": "./gulp-forever-monitor",
+  "author": {
+    "name": "Balasyan Alexandr",
+    "email": "mywebstreet@gmail.com"
+  },
+  "keywords": [
+    "gulp",
+    "forever",
+    "monitor",
+    "deamon"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha ./test/test.js"
+  },
+  "dependencies": {
+    "forever-monitor": "^1.7.1"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "fs-extra": "^2.0.0",
+    "mocha": "^3.2.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ortexx/gulp-forever-monitor"
+  },
+  "engines": {
+    "node": ">=5.0.0"
+  }
 }

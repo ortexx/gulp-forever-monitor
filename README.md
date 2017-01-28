@@ -1,7 +1,9 @@
 # gulp-forever-monitor
-Forever deamon for gulp. You can use this deamon without watching unlike nodemon.
+Forever deamon for gulp. Based on [forever-monitor](https://github.com/foreverjs/forever-monitor)
+
 # Install 
 `npm install gulp-forever-monitor`
+
 # Example
 ```js
 var gulp = require('gulp');
@@ -11,7 +13,7 @@ gulp.task('run:server', function() {
   var foreverMonitorOptions = { 
     env: process.env,
     args: process.argv,
-    watch: true, // can pass if you set any watch option, for example watchIgnorePatterns
+    watch: true, 
     watchIgnorePatterns:  ['.*', 'node_modules/**', 'public/**', 'temp/**']
   }
   
@@ -24,5 +26,6 @@ gulp.task('run:server', function() {
   })
 })
 ```
-Module return forever-monitor stream. You can use all its functions.
+
+Module return forever-monitor stream. 
 
