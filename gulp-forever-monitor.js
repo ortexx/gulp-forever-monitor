@@ -1,8 +1,8 @@
 ﻿"use strict";
 
-let forever = require('forever-monitor');
-let fs = require('fs');
-let path = require('path');
+const forever = require('forever-monitor');
+const fs = require('fs');
+const path = require('path');
 
 module.exports = function (source, options) {
   options = options || {};

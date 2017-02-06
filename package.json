@@ -1,6 +1,6 @@
 {
   "name": "gulp-forever-monitor",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Forever deamon for gulp",
   "main": "./gulp-forever-monitor",
   "author": {

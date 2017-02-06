@@ -6,8 +6,8 @@ Forever deamon for gulp. Based on [forever-monitor](https://github.com/foreverjs
 
 # Example
 ```js
-var gulp = require('gulp');
-var forever = require('gulp-forever-monitor');
+const gulp = require('gulp');
+const forever = require('gulp-forever-monitor');
 
 gulp.task('run:server', function() {
   var foreverMonitorOptions = { 
