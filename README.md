@@ -27,5 +27,5 @@ gulp.task('run:server', function() {
 })
 ```
 
-Module return forever-monitor stream. 
+Module returns forever-monitor stream. 
 
