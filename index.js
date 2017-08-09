@@ -47,7 +47,7 @@ module.exports = function (source, options) {
   process.on('exit', function () {
     if(createForeverIgnore) {
       try {
-        fs.unlinkSync(watchIgnoreFile)
+        fs.unlinkSync(watchIgnoreFile);
       }
       catch (err) {}
     }

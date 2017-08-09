@@ -1,7 +1,7 @@
 "use strict";
 
 const assert = require('chai').assert;
-const monitor = require('../gulp-forever-monitor');
+const monitor = require('../index');
 const fs = require('fs-extra');
 const path = require('path');
 
