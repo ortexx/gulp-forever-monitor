@@ -1,8 +1,8 @@
 {
   "name": "gulp-forever-monitor",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Forever deamon for gulp",
-  "main": "./gulp-forever-monitor",
+  "main": "./index",
   "author": {
     "name": "Balasyan Alexandr",
     "email": "mywebstreet@gmail.com"
