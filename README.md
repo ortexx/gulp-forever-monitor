@@ -15,7 +15,7 @@ gulp.task('run:server', function() {
     env: process.env,
     args: process.argv,
     watch: true, 
-    watchIgnorePatterns:  ['.*', 'node_modules/**', 'public/**', 'temp/**']
+    watchIgnorePatterns: ['.*', 'node_modules/**', 'public/**', 'temp/**']
   }
   
   forever('server.js', foreverMonitorOptions)  
