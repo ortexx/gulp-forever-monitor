@@ -1,7 +1,7 @@
 {
   "name": "gulp-forever-monitor",
-  "version": "1.0.4",
-  "description": "Forever deamon for gulp",
+  "version": "1.0.5",
+  "description": "Forever daemon for gulp",
   "main": "./index",
   "author": {
     "name": "Balasyan Alexandr",
@@ -18,13 +18,13 @@
     "test": "mocha ./test/test.js"
   },
   "dependencies": {
-    "forever-monitor": "^1.7.1"
+    "forever-monitor": "^2.0.0",
+    "signal-exit": "^3.0.3"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "fs-extra": "^2.0.0",
-    "mocha": "^6.2.1",
-    "braces": ">=2.3.1"
+    "chai": "^4.2.0",
+    "fs-extra": "^9.0.0",
+    "mocha": "^7.1.2"
   },
   "repository": {
     "type": "git",

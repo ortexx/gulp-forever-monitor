@@ -3,10 +3,10 @@
 const forever = require('forever-monitor');
 const fs = require('fs');
 const path = require('path');
+const onExit = require('signal-exit');
 
 module.exports = function (source, options) {
   options = options || {};
-
   let child;
   let currentDir = options.sourceDir || '.';
   let watchIgnoreFile;
@@ -35,26 +35,17 @@ module.exports = function (source, options) {
   }
 
   child = new (forever.Monitor)(source, options);
-
-  process.on('SIGINT', function () {
-    process.exit();
-  });
-
-  process.on('SIGTERM', function () {
-    process.exit();
-  });
-
-  process.on('exit', function () {
+  onExit(function () {
     if(createForeverIgnore) {
       try {
         fs.unlinkSync(watchIgnoreFile);
       }
-      catch (err) {}
+      catch (err) {
+        err.code != 'ENOENT' && console.warn(err.stack);
+      }
     }
     child.stop();
   });
-
   child.start();
-
   return child;
 };
