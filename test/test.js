@@ -5,7 +5,7 @@ const monitor = require('../index');
 const fs = require('fs-extra');
 const path = require('path');
 
-function clear() {
+function clear() { 
   fs.removeSync(path.join(__dirname, 'tmp'));
   fs.removeSync(path.join(__dirname, 'watch'));
 }
@@ -26,8 +26,9 @@ describe('GulpForeverMonitor:', function () {
   });
 
   it('check without watching', function (done) {
-    monitor(path.join(__dirname, 'app.js')).on('exit', function() {
+    const child = monitor(path.join(__dirname, 'app.js')).on('exit', function() {
       let file = fs.readFileSync(path.join(__dirname, 'tmp', 'source.txt'), 'utf8');
+      child.removeAllListeners();
       assert.equal(file, 'test');
       done();
     });
@@ -36,17 +37,18 @@ describe('GulpForeverMonitor:', function () {
   it('check with watching', function (done) {
     let restarted = false;
 
-    monitor(path.join(__dirname, 'app.js'), {
+    const child = monitor(path.join(__dirname, 'app.js'), {
       args: process.argv,
       watchDirectory: path.join(__dirname, 'watch'),
       watchIgnorePatterns:  ['.*', 'node_modules/**', 'public/**', 'temp/**']
     }).on('watch:restart', function() {
       restarted = true;
-    }).on('exit', function() {
+    }).on('exit', function () {   
       if(restarted) {
+        child.removeAllListeners();
         done();
       }
     });
-  });
+  })
 });
 
