@@ -1,6 +1,6 @@
 {
   "name": "gulp-forever-monitor",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "Forever daemon for gulp",
   "main": "./index",
   "author": {
@@ -18,7 +18,7 @@
     "test": "mocha ./test/test.js"
   },
   "dependencies": {
-    "forever-monitor": "^2.0.0",
+    "forever-monitor": "^3.0.3",
     "signal-exit": "^3.0.3"
   },
   "devDependencies": {
