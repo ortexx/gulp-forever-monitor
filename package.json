@@ -1,10 +1,10 @@
 {
   "name": "gulp-forever-monitor",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "Forever daemon for gulp",
   "main": "./index",
   "author": {
-    "name": "Balasyan Alexandr",
+    "name": "Alexander Balasyan",
     "email": "mywebstreet@gmail.com"
   },
   "keywords": [
